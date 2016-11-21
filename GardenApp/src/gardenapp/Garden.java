@@ -3,10 +3,10 @@ package gardenapp;
 import java.util.ArrayList;
 
 /**
- * Created by Söp on 2016.11.21..
+ * Created by Söp on 2016.11.21., for Java test exam
  */
 public class Garden {
-    public ArrayList<Plant> plants;
+    private ArrayList<Plant> plants;
 
     public Garden() {
         this.plants = new ArrayList<>();
@@ -24,13 +24,11 @@ public class Garden {
         this.plants.add(plant);
     }
 
-
     public String toString() {
         StringBuilder myPlants = new StringBuilder();
         for (Plant plant: plants)
         myPlants.append(plant.toString());
         return myPlants.toString();
     }
-
 
 }

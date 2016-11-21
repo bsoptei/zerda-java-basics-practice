@@ -90,23 +90,25 @@ class Main {
     System.out.println(Blackberry.getNumber());
   }
 }
-
+```
 
 What's wrong with the following output? What would be the actual output? [2p] Modify what you need to correct this! [2p]
 
 
-
+```
 Blackberry is created
 4
-
+```
 
 #### Explain what you did, and answer the questions here:
 - You cannot call the non static getNumber method for the Blackberry class from the static main method, but you can call it for an instance, e. g. Blackberry "b".
 - If you keep the original code, each time a new Blackberry object is created, it calls the constructor of the Apple class, so the statement from the Apple class is executed. Thus, the actual output is:
 
+```
 Apple is created
 Blackberry is created
 4
+```
 - But, if you create another Apple constructor that gets a string as an argument, and a Blackberry constructor that calls this superclass constructor with the argument "Blackberry", you can achieve the desired output scenario. 
 
 ## 4. Question time! (~20 mins) [6p]
@@ -121,7 +123,6 @@ An object is an instance of a class.
 #### Your answer:
 The Object is the general superclass.
 The actual class will inherit for example the toString(), the getClass(), and the equals() methods, respectively.
-
 
 ### What is polymorphism? [2p]
 #### Your answer:
