@@ -4,11 +4,16 @@ package gardenapp;
  * Created by Söp on 2016.11.21., for Java test exam
  */
 abstract class Plant {
-    int waterLevel;
-    String color;
-    public abstract void waterPlant(double liters);
+    private double waterLevel;
+    private String color;
     double comfortWaterLevel;
-    String name;
+    private String name;
+    double absorbanceCapacity;
+
+    Plant(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
 
     public String toString() {
         return String.format("The %s %s %s water\n", color, name, checkStatus());
@@ -20,5 +25,9 @@ abstract class Plant {
         } else {
             return "doesn't need";
         }
+    }
+
+    void water(double liters) {
+        this.waterLevel += liters * absorbanceCapacity;
     }
 }

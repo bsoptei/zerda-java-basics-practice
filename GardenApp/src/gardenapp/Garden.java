@@ -14,7 +14,7 @@ public class Garden {
 
     public String water(double liters) {
         for (Plant plant : plants) {
-            plant.waterPlant(liters / plants.size());
+            plant.water(liters / plants.size());
         }
         return String.format("Watering with %.0f", liters);
     }

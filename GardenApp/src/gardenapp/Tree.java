@@ -6,18 +6,8 @@ package gardenapp;
 public class Tree extends Plant {
 
     public Tree(String color) {
+        super("tree", color);
         this.comfortWaterLevel = 10;
-        this.color = color;
-        this.name = "tree";
-    }
-
-    @Override
-    public void waterPlant(double liters) {
-        this.waterLevel += liters * 0.4;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
+        this.absorbanceCapacity = 0.4;
     }
 }

@@ -6,13 +6,8 @@ package gardenapp;
 public class Flower extends Plant {
 
     public Flower(String color) {
+        super("flower", color);
         this.comfortWaterLevel = 5;
-        this.color = color;
-        this.name = "flower";
-    }
-
-    @Override
-    public void waterPlant(double liters) {
-        this.waterLevel += liters * 0.75;
+        this.absorbanceCapacity = 0.75;
     }
 }
