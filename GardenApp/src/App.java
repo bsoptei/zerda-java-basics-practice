@@ -11,11 +11,11 @@ public class App {
         myLittleGarden.addPlant(new Flower("blue"));
         myLittleGarden.addPlant(new Tree("purple"));
         myLittleGarden.addPlant(new Tree("orange"));
-        
-        System.out.print(myLittleGarden.toString());
+
+        System.out.println(myLittleGarden.toString());
         System.out.println(myLittleGarden.water(40));
-        System.out.print(myLittleGarden.toString());
+        System.out.println(myLittleGarden.toString());
         System.out.println(myLittleGarden.water(70));
-        System.out.print(myLittleGarden.toString());
+        System.out.println(myLittleGarden.toString());
     }
 }

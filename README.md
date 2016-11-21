@@ -111,6 +111,21 @@ Blackberry is created
 ```
 - But, if you create another Apple constructor that gets a string as an argument, and a Blackberry constructor that calls this superclass constructor with the argument "Blackberry", you can achieve the desired output scenario. 
 
+```java
+
+public Apple(String name) {
+	this.name = name;
+	System.out.printf("%s is created\n", name);
+}
+
+```
+and
+```java
+public Blackberry() {
+	super("Blackberry");
+}
+```
+
 ## 4. Question time! (~20 mins) [6p]
 
 ### Whats the difference between a Class and an Object? [2p]
