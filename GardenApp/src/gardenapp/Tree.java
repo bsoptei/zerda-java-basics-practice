@@ -10,7 +10,6 @@ public class Tree extends Plant {
         this.name = "tree";
     }
 
-
     @Override
     public String checkStatus() {
         if (waterLevel < 10) {

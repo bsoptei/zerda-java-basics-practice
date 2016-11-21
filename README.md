@@ -90,24 +90,39 @@ class Main {
     System.out.println(Blackberry.getNumber());
   }
 }
-```
+
 
 What's wrong with the following output? What would be the actual output? [2p] Modify what you need to correct this! [2p]
-```
+
+
+
 Blackberry is created
 4
-```
+
 
 #### Explain what you did, and answer the questions here:
+- You cannot call the non static getNumber method for the Blackberry class from the static main method, but you can call it for an instance, e. g. Blackberry "b".
+- If you keep the original code, each time a new Blackberry object is created, it calls the constructor of the Apple class, so the statement from the Apple class is executed. Thus, the actual output is:
 
+Apple is created
+Blackberry is created
+4
+- But, if you create another Apple constructor that gets a string as an argument, and a Blackberry constructor that calls this superclass constructor with the argument "Blackberry", you can achieve the desired output scenario. 
 
 ## 4. Question time! (~20 mins) [6p]
 
 ### Whats the difference between a Class and an Object? [2p]
 #### Your answer:
+A class is a template that can be used for creating objects.
+An object is an instance of a class.
+
 
 ### What is the superclass when a class doesnt extend anything? What methods will it inherit (the two most important is enough)? [2p]
 #### Your answer:
+The Object is the general superclass.
+The actual class will inherit for example the toString(), the getClass(), and the equals() methods, respectively.
+
 
 ### What is polymorphism? [2p]
 #### Your answer:
+Polymorphism is an object's ability to manifest in more than one form. It's related to the parent-child relationships of objects. If an object can pass more than one IS-A test, it is considered as polymorphic. In Java, all objects are in an IS-A relationship with the Object class and their own type, so all Java objects are polymorphic.
