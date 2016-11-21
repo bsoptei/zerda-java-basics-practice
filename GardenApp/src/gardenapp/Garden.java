@@ -1,6 +1,7 @@
 package gardenapp;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Created by Söp on 2016.11.21., for Java test exam
@@ -14,7 +15,9 @@ public class Garden {
 
     public String water(double liters) {
         for (Plant plant : plants) {
-            plant.water(liters / plants.size());
+            if (Objects.equals(plant.checkStatus(), "needs")) {
+                plant.water(liters / plants.size());
+            }
         }
         return String.format("Watering with %.0f", liters);
     }

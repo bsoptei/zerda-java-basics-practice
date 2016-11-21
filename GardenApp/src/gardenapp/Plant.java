@@ -19,7 +19,7 @@ abstract class Plant {
         return String.format("The %s %s %s water\n", color, name, checkStatus());
     }
 
-    private String checkStatus() {
+    String checkStatus() {
         if (waterLevel < comfortWaterLevel) {
             return "needs";
         } else {
