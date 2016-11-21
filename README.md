@@ -102,6 +102,9 @@ Blackberry is created
 
 #### Explain what you did, and answer the questions here:
 - You cannot call the non static getNumber method for the Blackberry class from the static main method, but you can call it for an instance, e. g. Blackberry "b".
+```java
+System.out.println(b.getNumber());
+```
 - If you keep the original code, each time a new Blackberry object is created, it calls the constructor of the Apple class, so the statement from the Apple class is executed. Thus, the actual output is:
 
 ```

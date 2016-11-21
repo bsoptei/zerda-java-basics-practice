@@ -6,17 +6,9 @@ package gardenapp;
 public class Flower extends Plant {
 
     public Flower(String color) {
+        this.comfortWaterLevel = 5;
         this.color = color;
         this.name = "flower";
-    }
-
-    @Override
-    public String checkStatus() {
-        if (waterLevel < 5) {
-            return "needs";
-        } else {
-            return "doesn't need";
-        }
     }
 
     @Override

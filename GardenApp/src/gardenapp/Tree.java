@@ -6,17 +6,9 @@ package gardenapp;
 public class Tree extends Plant {
 
     public Tree(String color) {
+        this.comfortWaterLevel = 10;
         this.color = color;
         this.name = "tree";
-    }
-
-    @Override
-    public String checkStatus() {
-        if (waterLevel < 10) {
-            return "needs";
-        } else {
-            return "doesn't need";
-        }
     }
 
     @Override
