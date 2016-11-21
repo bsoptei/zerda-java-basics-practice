@@ -1,7 +1,7 @@
 import gardenapp.*;
 
 /**
- * Created by Söp on 2016.11.21., for Java test exam
+ ** Created by Söp on 2016.11.21., for Java test exam
  */
 public class App {
     public static void main(String[] args) {
