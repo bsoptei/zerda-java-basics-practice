@@ -16,7 +16,7 @@ public class Garden {
     public String water(double liters) {
         for (Plant plant : plants) {
             if (Objects.equals(plant.checkStatus(), "needs")) {
-                plant.water(liters / plants.size());
+                plant.water(liters / checkWhoNeedsWater());
             }
         }
         return String.format("Watering with %.0f", liters);
@@ -31,5 +31,15 @@ public class Garden {
         for (Plant plant: plants)
         myPlants.append(plant.toString());
         return myPlants.toString();
+    }
+
+    private int checkWhoNeedsWater() {
+        int thirstyPlants = 0;
+        for (Plant plant : plants) {
+            if (Objects.equals(plant.checkStatus(), "needs")) {
+                thirstyPlants++;
+            }
+        }
+        return thirstyPlants;
     }
 }
